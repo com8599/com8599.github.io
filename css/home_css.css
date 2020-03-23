@@ -18,3 +18,8 @@ body{
 .masthead {
   border-bottom: 1px solid #a44;
 }
+.btn--inverse {
+    background-color: #fff;
+    color: #e99;
+    border: 1px solid #a44;
+}

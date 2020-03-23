@@ -10,3 +10,10 @@ body{
   background-color:#ffaaaa;
   color:#fff;
 }
+.archive__subtitle {
+    color: #ffaaaa;
+    border-bottom: 1px solid #a44;
+}
+.masthead {
+  border-bottom: 1px solid #a44;
+}

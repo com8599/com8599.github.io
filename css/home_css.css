@@ -1,7 +1,11 @@
 body{
   background-color:#fffafa;
 }
-.greedy-nav{
+#site-nav{
   background-color:#fffafa;
   text-align:center;
+}
+#footer{
+  background-color:#ffaaaa;
+  color:#fff;
 }

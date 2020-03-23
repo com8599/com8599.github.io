@@ -5,6 +5,7 @@ body{
   background-color:#fff3f3;
   display:block;
   text-align:center;
+  color:#ffaaaa; text-shadow: 2px 2px 2px #e99;
 }
 #footer{
   background-color:#ffaaaa;

@@ -3,7 +3,7 @@ body{
 }
 #site-nav{
   background-color:#fff3f3;
-  display:table-cell;
+  display:block;
   text-align:center;
 }
 #footer{

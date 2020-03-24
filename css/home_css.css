@@ -39,6 +39,9 @@ body{
     background: transparent;
     box-shadow: none;
   }
+  .sidebar{
+    border-right: 2px double #5e5e5f;
+  }
 }
 .author__urls:before {
     border-color: #5e5e5f transparent;
@@ -51,7 +54,4 @@ a.site-title:visited{
 }
 .page__footer-copyright a:visited{
     color:#fff1b9;
-}
-.sidebar{
-  border-right: 2px double #5e5e5f;
 }

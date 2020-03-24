@@ -38,6 +38,7 @@ body{
     border: 0;
     background: transparent;
     box-shadow: none;
+  }
 }
 .author__urls:before {
     border-color: #3f4040 transparent;

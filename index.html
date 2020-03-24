@@ -10,3 +10,15 @@ author_profile: true
   <tr><td><div class="donation">B</div></td><td><div class="donation">C</div></td></tr>
 </table>
 
+<script type="text/javascript">
+  var getDon = document.getElementsByClassName("donation");
+  for (var i = 0; i < getDon.length; i++){
+    getDon[i].style.height = getDon[i].style.width;
+  }
+  
+  window.onresize = function() { 
+    for (var i = 0; i < getDon.length; i++){
+      getDon[i].style.height = getDon[i].style.width;
+    } 
+  };
+</script>

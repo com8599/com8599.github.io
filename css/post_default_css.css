@@ -7,15 +7,13 @@
 .page__meta, .comment__date {
     color: #5e5e5f;
 }
-a {
+a, a:visited {
     color: #5e5e5f;
-}
-a:visited {
-    color:#5e5e5f;
 }
 a.site-title:visited{
     color:#272625;
 }
-ul.social-icons li a:visited{
-    color:#272625;
+ul.social-icons li a:visited,
+.page__footer-copyright a:visited{
+    color:#fff1b9;
 }

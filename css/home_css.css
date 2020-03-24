@@ -61,7 +61,7 @@ a.site-title:visited{
 
 
 //donation
-.table_donation{
+table.table_donation{
   margin-top:1em;
 }
 .table_donation td{

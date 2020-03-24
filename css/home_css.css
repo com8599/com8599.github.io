@@ -49,6 +49,7 @@ a, a:visited , .social-icons li a:visited{
 a.site-title:visited{
     color:#272625;
 }
-.page__footer-copyright a:visited{
+.page__footer-copyright a:visited,
+.page__footer-copyright .social-icons li a:visited{
     color:#fff1b9;
 }

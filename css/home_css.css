@@ -24,7 +24,7 @@ body{
     border: 2px dashed #3f4040;
 }
 .author__urls {
-    border: 1px solid #3f4040;
+    border: 2px solid #3f4040;
     border-radius: 4px;
     background: #f3f3f3;
     box-shadow: 0 2px 4px 0 rgba(255,241,185,0.16), 0 2px 10px 0 rgba(255,241,185,0.12);
@@ -56,5 +56,5 @@ a.site-title:visited{
     color:#fff1b9;
 }
 .author__urls:after {
-  top: -11px;
+  top: -8px;
 }

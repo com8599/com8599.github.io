@@ -39,7 +39,16 @@ body{
     background: transparent;
     box-shadow: none;
 }
-}
 .author__urls:before {
     border-color: #3f4040 transparent;
+}
+a, a:visited {
+    color: #5e5e5f;
+}
+a.site-title:visited{
+    color:#272625;
+}
+ul.social-icons li a:visited,
+.page__footer-copyright a:visited{
+    color:#fff1b9;
 }

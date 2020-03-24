@@ -1,18 +1,15 @@
 .page__share {
-    border-top: 1px solid #c99;
+    border-top: 1px solid #f1bbba;
 }
 .page__taxonomy-item {
-    border: 1px solid #c99;
+    border: 1px solid #f1bbba;
 }
 .page__meta, .comment__date {
-    color: #faa;
+    color: #f1bbba;
 }
 a {
-    color: #a44;
+    color: #a79c8e;
 }
 a:visited {
-    color:#966;
-}
-a.site-title:visited{
-    color:#a44;
+    color:#a79c8e;
 }

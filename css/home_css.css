@@ -43,7 +43,7 @@ body{
 .author__urls:before {
     border-color: #3f4040 transparent;
 }
-a, a:visited , .author__urls li a:visited{
+a, a:visited , ul.author__urls .social-icons li a:visited{
     color: #5e5e5f;
 }
 a.site-title:visited{

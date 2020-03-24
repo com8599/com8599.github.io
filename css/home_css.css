@@ -41,7 +41,6 @@ body{
   }
 }
 .author__urls:before {
-    border: 2px solid;
     border-color: #5e5e5f transparent;
 }
 a, a:visited{

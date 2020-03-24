@@ -1,27 +1,27 @@
 body{
-  background-color:#fff3f3;
+  background-color:#f8ecc9;
 }
 #site-nav{
-  background-color:#fff3f3;
+  background-color:#f8ecc9;
   display:block;
   text-align:center;
-  color:#ffaaaa; text-shadow: 2px 2px 2px #e99;
+  color:#f1bbba; text-shadow: 2px 2px 2px #ed9f9f;
 }
 #footer{
-  background-color:#ffaaaa;
-  color:#fff;
+  background-color:#ed9f9f;
+  color:#a79c8e;
 }
 .archive__subtitle {
-    color: #ffaaaa;
-    border-bottom: 1px solid #a44;
+    color: #a79c8e;
+    border-bottom: 1px solid #ed9f9f;
 }
 .masthead {
-  border-bottom: 1px solid #a44;
+  border-bottom: 1px solid #ed9f9f;
 }
 .btn--inverse {
     background-color: #fff;
-    color: #e99;
-    border: 1px solid #a44;
+    color: #a79c8e;
+    border: 1px solid #ed9f9f;
 }
 .author__urls {
     border: 1px solid #a44;
@@ -41,5 +41,5 @@ body{
 }
 }
 .author__urls:before {
-    border-color: #a44 transparent;
+    border-color: #ed9f9f transparent;
 }

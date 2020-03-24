@@ -271,10 +271,10 @@ compress_html:
 defaults:
   # _posts
   - scope:
-      path: "/_layouts/singles.html"
+      path: ""
       type: posts
     values:
-      layout: default
+      layout: singles
       author_profile: true
       read_time: true
       comments: true

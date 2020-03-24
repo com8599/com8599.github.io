@@ -5,7 +5,7 @@ body{
   background-color:#fff1b9;
   display:block;
   text-align:center;
-  color:#272625; text-shadow: 2px 2px 2px #ed9f9f;
+  color:#272625; text-shadow: 2px 2px 2px #5e5e5f;
 }
 #footer{
   background-color:#3f4040;
@@ -19,14 +19,14 @@ body{
   border-bottom: 1px solid #3f4040;
 }
 .btn--inverse {
-    background-color: #fff;
+    background-color: #5e5e5f;
     color: #272625;
     border: 1px solid #3f4040;
 }
 .author__urls {
     border: 1px solid #3f4040;
     border-radius: 4px;
-    background: #fff;
+    background: #5e5e5f;
     box-shadow: 0 2px 4px 0 rgba(255,241,185,0.16), 0 2px 10px 0 rgba(255,241,185,0.12);
 }
 @media (min-width: 64em){

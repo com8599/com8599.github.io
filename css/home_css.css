@@ -26,7 +26,7 @@ body{
 .author__urls {
     border: 2px solid #3f4040;
     border-radius: 4px;
-    background: #fcf8e9;
+    background: #f3f3f3;
     box-shadow: 0 2px 4px 0 rgba(255,241,185,0.16), 0 2px 10px 0 rgba(255,241,185,0.12);
 }
 @media (min-width: 64em){
@@ -41,8 +41,7 @@ body{
   }
 }
 .author__urls:before {
-    border-color: #3f4040 transparent;
-    background:#fcf8e9;
+    border-color: #f3f3f3 transparent;
 }
 a, a:visited{
     color: #5e5e5f;

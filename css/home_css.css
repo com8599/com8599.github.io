@@ -13,7 +13,7 @@ body{
 }
 .archive__subtitle {
     color: #272625;
-    border-bottom: 2px solid #5e5e5f;
+    border-bottom: 2px dashed #5e5e5f;
 }
 .masthead {
   border-bottom: 2px dashed #5e5e5f;
@@ -21,10 +21,10 @@ body{
 .btn--inverse {
     background-color: #5e5e5f;
     color: #272625;
-    border: 1px solid #3f4040;
+    border: 2px dashed #3f4040;
 }
 .author__urls {
-    border: 1px solid #3f4040;
+    border: 2px solid #3f4040;
     border-radius: 4px;
     background: #5e5e5f;
     box-shadow: 0 2px 4px 0 rgba(255,241,185,0.16), 0 2px 10px 0 rgba(255,241,185,0.12);
@@ -51,4 +51,7 @@ a.site-title:visited{
 }
 .page__footer-copyright a:visited{
     color:#fff1b9;
+}
+.sidebar{
+  border-right: 2px double #5e5e5f;
 }

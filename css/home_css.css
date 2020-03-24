@@ -1,33 +1,33 @@
 body{
-  background-color:#f8ecc9;
+  background-color:#fff1b9;
 }
 #site-nav{
-  background-color:#f8ecc9;
+  background-color:#fff1b9;
   display:block;
   text-align:center;
-  color:#f1bbba; text-shadow: 2px 2px 2px #ed9f9f;
+  color:#272625; text-shadow: 2px 2px 2px #ed9f9f;
 }
 #footer{
-  background-color:#ed9f9f;
-  color:#a79c8e;
+  background-color:#3f4040;
+  color:#fff1b9;
 }
 .archive__subtitle {
-    color: #a79c8e;
-    border-bottom: 1px solid #ed9f9f;
+    color: #272625;
+    border-bottom: 1px solid #3f4040;
 }
 .masthead {
-  border-bottom: 1px solid #ed9f9f;
+  border-bottom: 1px solid #3f4040;
 }
 .btn--inverse {
     background-color: #fff;
-    color: #a79c8e;
-    border: 1px solid #ed9f9f;
+    color: #272625;
+    border: 1px solid #3f4040;
 }
 .author__urls {
-    border: 1px solid #a44;
+    border: 1px solid #3f4040;
     border-radius: 4px;
     background: #fff;
-    box-shadow: 0 2px 4px 0 rgba(255,0,0,0.16), 0 2px 10px 0 rgba(255,0,0,0.12);
+    box-shadow: 0 2px 4px 0 rgba(255,241,185,0.16), 0 2px 10px 0 rgba(255,241,185,0.12);
 }
 @media (min-width: 64em){
 .author__urls {
@@ -41,5 +41,5 @@ body{
 }
 }
 .author__urls:before {
-    border-color: #ed9f9f transparent;
+    border-color: #3f4040 transparent;
 }

@@ -4,3 +4,7 @@
 .page__taxonomy-item {
     border: 1px solid #c99;
 }
+.page__meta, .comment__date {
+    margin-top: 2em;
+    color: #faa;
+}

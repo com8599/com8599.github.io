@@ -55,3 +55,6 @@ a.site-title:visited{
 .page__footer-copyright a:visited{
     color:#fff1b9;
 }
+.author__urls:after {
+  top: -11px;
+}

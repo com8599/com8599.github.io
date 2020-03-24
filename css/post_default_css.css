@@ -5,6 +5,8 @@
     border: 1px solid #c99;
 }
 .page__meta, .comment__date {
-    margin-top: 2em;
     color: #faa;
+}
+a {
+    color: #a44;
 }

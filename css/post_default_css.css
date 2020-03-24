@@ -10,3 +10,7 @@
 a {
     color: #a44;
 }
+a:visited {
+    background: #c99;
+    color:#fff;
+}

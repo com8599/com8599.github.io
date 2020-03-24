@@ -13,10 +13,10 @@ body{
 }
 .archive__subtitle {
     color: #272625;
-    border-bottom: 1px solid #3f4040;
+    border-bottom: 1px solid #5e5e5f;
 }
 .masthead {
-  border-bottom: 1px solid #3f4040;
+  border-bottom: 1px solid #5e5e5f;
 }
 .btn--inverse {
     background-color: #5e5e5f;

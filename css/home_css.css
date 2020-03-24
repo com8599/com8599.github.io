@@ -61,12 +61,12 @@ a.site-title:visited{
 
 
 //donation
-table.table_donation{
+table{
   margin-top:1em;
 }
 .table_donation td{
-  width: 50%;
-  height: 50%;
+  width: 100em;
+  height: 100em;
 }
 .table_donation tbody{
   width:100%;

@@ -13,3 +13,6 @@ a {
 a:visited {
     color:#a00;
 }
+a.site-title:visited{
+    color:#a44;
+}

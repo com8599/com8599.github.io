@@ -19,7 +19,7 @@ body{
   border-bottom: 2px dashed #5e5e5f;
 }
 .btn--inverse {
-    background-color: #5e5e5f;
+    background-color: #fcf8e9;
     color: #272625;
     border: 2px dashed #3f4040;
 }
@@ -41,7 +41,7 @@ body{
   }
 }
 .author__urls:before {
-    border-color: #f3f3f3 transparent;
+    border-color: #5e5e5f transparent;
 }
 a, a:visited{
     color: #5e5e5f;

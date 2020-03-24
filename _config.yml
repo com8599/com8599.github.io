@@ -271,7 +271,7 @@ compress_html:
 defaults:
   # _posts
   - scope:
-      path: "layout/posts.html"
+      path: "_layouts/posts.html"
       type: posts
     values:
       layout: single

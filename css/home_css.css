@@ -2,7 +2,7 @@ body{
   background-color:#fcf8e9;
 }
 #site-nav{
-  background-color:#5e5e5f;
+  background-color:#fcf8e9;
   display:block;
   text-align:center;
   color:#272625; text-shadow: 2px 2px 2px #aeaeaf;
@@ -13,10 +13,11 @@ body{
 }
 .archive__subtitle {
     color: #272625;
-    border-bottom: 1px solid #5e5e5f;
+    border-bottom: 2px solid #5e5e5f;
 }
 .masthead {
-  border-bottom: 1px solid #5e5e5f;
+  background-color:#5e5e5f;
+  border-bottom: 2px dashed #5e5e5f;
 }
 .btn--inverse {
     background-color: #5e5e5f;

@@ -2,9 +2,8 @@
 layout: archive
 ---
 
-{{ content }}
-
 <link rel="stylesheet" type="text/css" href="css/home_css.css">
+{{ content }}
 <ul class="taxonomy__index">
   {% assign postsInYear = site.posts | group_by_exp: 'post', 'post.date | date: "%Y"' %}
   {% for year in postsInYear %}

@@ -64,9 +64,13 @@ a.site-title:visited{
 .table_donation{
   width: 60%;
 }
-.table_donation td, .table_donation tbody{
+.table_donation td{
   width: 50%;
   height: 50%;
+}
+.table_donation tbody{
+  width: 100%;
+  height: 100%;
 }
 @media (min-width: 64em){
 .table_donation{

@@ -61,7 +61,7 @@ a.site-title:visited{
 
 
 //donation
-.table_donation td{
+.table_donation tbody tr td{
   width: 10em;
   height: 10em;
 }

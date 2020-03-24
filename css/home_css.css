@@ -58,3 +58,13 @@ a.site-title:visited{
 .author__urls:after {
   top: -8px;
 }
+
+
+//donation
+.donation{
+  width:25em; height:25em; border-radius:5px; border: 3px double #aeaeaf; font-size:2em; color:#fff;
+}
+#twip{
+  background:url('/img/twip.png');
+  href:url('https://twip.kr/com8599');
+}

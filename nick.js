@@ -13,10 +13,9 @@
   
   function relocation(){
     if(name != ''){
-      return 'https://maple.gg/u/'+name;
+      return "location.href='https://maple.gg/u/'"+name;
     }else{
-      alert('닉네임을 정하세용');
-      return 'com8599.github.io/nickname.html';
+      return "alert('닉네임을 정하세용')";
     }
   }
 //https://maplestory.nexon.com/Ranking/World/Total?page=6875021

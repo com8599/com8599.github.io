@@ -1,1 +1,26 @@
-<html></html>
+<!doctype html>
+<html><head></head><body>
+
+<h2>★개조된 녜힁 제조기★</h2>
+
+<p id="demo">닉네임 나오는 곳</p>
+
+<script type="text/javascript">
+  function nyehuing(length) {
+    var name = '';
+    for(var i = 0; i < length; i++) {
+      name += String.fromCharCode(Math.floor(Math.random()*11171)+44032);
+    }
+    return name;
+  }
+</script>
+
+<button type="button" onclick="document.getElementById('demo').innerHTML = nyehuing(2)">Click Me!</button>
+  
+<button type="button" onclick="document.getElementById('demo').innerHTML = nyehuing(3)">세글자</button>  
+
+<button type="button" onclick="document.getElementById('demo').innerHTML = nyehuing(6)">더욱 긴 녜힁</button>
+  
+
+
+</body></html>

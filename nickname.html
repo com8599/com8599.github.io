@@ -18,15 +18,6 @@
     var div = document.getElementById('strdiv');
     var getName = document.getElementById('demo').innerHTML;
       
-    var request = require('request'), cheerio = require('cheerio');
-
-    var url = "https://maplestory.nexon.com/Ranking/World/Total?page=6875021";
-
-    request(url, function (err, res, html) {
-        if (!err) {
-            div.innerHTML = cheerio.load(html);
-        }
-    })
  let cheerio = require('cheerio');
 let $ = cheerio.load('https://maplestory.nexon.com/Ranking/World/Total?c='+getName);
 

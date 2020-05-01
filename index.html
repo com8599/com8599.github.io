@@ -12,15 +12,6 @@ author_profile: true
   </tbody>
 </table>
 
-<h2>★랜덤 녜힁 제조기★</h2>
-
-<p id="demo"></p>
-<button type="button" onclick="document.getElementById('demo').innerHTML = nyehuing(2)">Click Me!</button>
-  
-<button type="button" onclick="document.getElementById('demo').innerHTML = nyehuing(3)">세글자</button>  
-
-<button type="button" onclick="document.getElementById('demo').innerHTML = nyehuing(6)">더욱 긴 녜힁</button>
-
 <script type="text/javascript">
   var getDon = document.getElementsByClassName("donation");
   for (var i = 0; i < getDon.length; i++){
@@ -32,15 +23,6 @@ author_profile: true
       getDon[i].style.height = getDon[i].style.width;
     } 
   };
-  
-  
-  function nyehuing(length) {
-    var name = '';
-    for(var i = 0; i < length; i++) {
-      name += String.fromCharCode(Math.floor(Math.random()*11171)+44032);
-    }
-    return name;
-  }
 </script>
 
 

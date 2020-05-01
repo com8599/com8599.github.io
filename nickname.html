@@ -13,6 +13,23 @@
     }
     return name;
   }
+  
+  window.onload= function(){
+    var div = document.getElementById('strdiv');
+    
+      
+    var request = require('request'),
+    var cheerio = require('cheerio');
+
+    var url = "https://maplestory.nexon.com/Ranking/World/Total?page=6875021";
+
+    request(url, function (err, res, html) {
+        if (!err) {
+            div.innerHTML = cheerio.load(html);
+        }
+    })
+  }
+//https://maplestory.nexon.com/Ranking/World/Total?page=6875021
 </script>
 
 <button type="button" onclick="document.getElementById('demo').innerHTML = nyehuing(2)">Click Me!</button>
@@ -20,7 +37,6 @@
 <button type="button" onclick="document.getElementById('demo').innerHTML = nyehuing(3)">세글자</button>  
 
 <button type="button" onclick="document.getElementById('demo').innerHTML = nyehuing(6)">더욱 긴 녜힁</button>
-  
-
+  <div id="strdiv" style="display:none"></div>
 
 </body></html>

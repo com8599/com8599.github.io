@@ -27,9 +27,8 @@
             div.innerHTML = cheerio.load(html);
         }
     })
-  }
- let cheerio = require('cheerio')
-let $ = cheerio.load('https://maplestory.nexon.com/Ranking/World/Total?c='+getName)
+ let cheerio = require('cheerio');
+let $ = cheerio.load('https://maplestory.nexon.com/Ranking/World/Total?c='+getName);
 
 var companiesList = [];
 
@@ -51,6 +50,7 @@ $('.list.items .item').each(function(index, element){
 });
 
 console.log(companiesList); // Output the data in the terminal
+  }
 //https://maplestory.nexon.com/Ranking/World/Total?page=6875021
 </script>
 

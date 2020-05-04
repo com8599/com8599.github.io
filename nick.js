@@ -15,6 +15,7 @@ var names = ["가", "각", "간", "갇", "갈", "갉", "갊", "감", "갑", "값
   }
   
   window.onload = function(){
+    alert('닉네임을 정하세용');
     var btn = document.getElementById('btnSearch');
     btn.onclick = function(){
       if(name != ''){

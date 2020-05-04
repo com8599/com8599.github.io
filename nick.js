@@ -14,11 +14,14 @@ var names = ["가", "각", "간", "갇", "갈", "갉", "갊", "감", "갑", "값
     return name;
   }
   
-  function relocation(){
-    if(name != ''){
-      return "location.href='https://maple.gg/u/'"+name;
-    }else{
-      return "alert('닉네임을 정하세용')";
+  window.onload = function(){
+    var btn = document.getElementById('btnSearch');
+    btn.onclick = function(){
+      if(name != ''){
+        location.href='https://maple.gg/u/'+name;
+      }else{
+        alert('닉네임을 정하세용');
+      }
     }
   }
 //https://maplestory.nexon.com/Ranking/World/Total?page=6875021

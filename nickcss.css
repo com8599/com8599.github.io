@@ -1,4 +1,7 @@
-
+html{
+	background:#333333;
+	color:#dddddd;
+}
   .spanName{
     color:#999999;
   }
@@ -44,3 +47,6 @@
 			color: rgb(255,0,127);
 		}
   }
+#main {
+	border:2px dotted white;
+}

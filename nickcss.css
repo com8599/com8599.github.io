@@ -3,7 +3,7 @@
     color:#999999;
   }
   h2{
-    animation: rainbow 2.5s linear;
+    animation: rainbow 1.5s linear;
     animation-iteration-count: infinite;
   }
   @keyframes rainbow{

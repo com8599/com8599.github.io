@@ -47,6 +47,9 @@ html{
 			color: rgb(255,0,127);
 		}
   }
-#main {
-	border:2px dotted white;
-}
+
+	#main {
+		border:2px dotted white;
+		width:30%;
+		min-width:100px;
+	}

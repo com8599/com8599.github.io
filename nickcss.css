@@ -56,7 +56,7 @@ html{
 	}
 #main button{
   border:2px solid white;
-  height:10px;
+  height:20px;
   vertical-align:middle;
   transition: all 0.5s;
   cursor: pointer;

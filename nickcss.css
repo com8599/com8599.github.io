@@ -54,6 +54,12 @@ html{
 		min-width:200px;
 		padding:10px;
 	}
+#main:before{
+	border:5px solid gray;
+}
+#main:after{
+	border: 3px dashed red;
+}
 button{
 	background:#333333;
 	color:white;

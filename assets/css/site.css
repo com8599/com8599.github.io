@@ -122,11 +122,26 @@ nav a {
   background: transparent;
   color: var(--ink);
   border-radius: 999px;
-  padding: 0.15rem 0.65rem;
-  font: inherit;
-  font-size: 0.78rem;
-  letter-spacing: 0.04em;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1;
   cursor: pointer;
+}
+
+.theme-toggle::before {
+  content: "☀️";
+}
+
+:root[data-theme="dark"] .theme-toggle::before {
+  content: "🌙";
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle::before {
+    content: "🌙";
+  }
 }
 
 .theme-toggle:hover {

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  {% seo %}
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem("theme");
+        if (theme === "light" || theme === "dark") {
+          document.documentElement.setAttribute("data-theme", theme);
+        }
+      } catch (error) {}
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#content">본문으로</a>
+  <header class="top">
+    <div class="wrap bar">
+      <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <nav aria-label="주요">
+        <a href="{{ '/' | relative_url }}">글</a>
+        <a href="{{ '/tags/' | relative_url }}">태그</a>
+        <a href="https://github.com/com8599">GitHub</a>
+        <button type="button" class="theme-toggle">색</button>
+      </nav>
+    </div>
+  </header>
+  <main id="content">
+    {{ content }}
+  </main>
+  <footer class="colophon">
+    <div class="wrap">
+      <p>© {{ site.time | date: "%Y" }} {{ site.author.name }}</p>
+      <p><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a> · <a href="{{ '/feed.xml' | relative_url }}">Feed</a></p>
+    </div>
+  </footer>
+  <script>
+    document.querySelector(".theme-toggle").addEventListener("click", function () {
+      var root = document.documentElement;
+      var current = root.getAttribute("data-theme");
+      if (!current) {
+        current = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      var next = current === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      try {
+        localStorage.setItem("theme", next);
+      } catch (error) {}
+    });
+  </script>
+</body>
+</html>

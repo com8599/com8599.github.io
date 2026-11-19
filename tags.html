@@ -1,0 +1,24 @@
+---
+layout: default
+title: 태그
+permalink: /tags/
+---
+<div class="wrap">
+  <section class="intro">
+    <p class="kicker">Topics</p>
+    <h1>태그</h1>
+  </section>
+  {% for tag in site.tags %}
+    <section class="tag-group" id="{{ tag[0] | slugify }}">
+      <h2>{{ tag[0] }}</h2>
+      <ul class="tag-posts">
+        {% for post in tag[1] %}
+          <li>
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endfor %}
+</div>

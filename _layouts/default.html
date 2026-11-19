@@ -26,7 +26,7 @@
         <a href="{{ '/' | relative_url }}">글</a>
         <a href="{{ '/tags/' | relative_url }}">태그</a>
         <a href="https://github.com/com8599">GitHub</a>
-        <button type="button" class="theme-toggle">색</button>
+        <button type="button" class="theme-toggle" aria-label="달빛으로 전환"></button>
       </nav>
     </div>
   </header>
@@ -40,18 +40,26 @@
     </div>
   </footer>
   <script>
-    document.querySelector(".theme-toggle").addEventListener("click", function () {
-      var root = document.documentElement;
-      var current = root.getAttribute("data-theme");
-      if (!current) {
-        current = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    (function () {
+      var button = document.querySelector(".theme-toggle");
+      function labelFor(theme) {
+        return theme === "dark" ? "햇빛으로 전환" : "달빛으로 전환";
       }
-      var next = current === "dark" ? "light" : "dark";
-      root.setAttribute("data-theme", next);
-      try {
-        localStorage.setItem("theme", next);
-      } catch (error) {}
-    });
+      function currentTheme() {
+        var theme = document.documentElement.getAttribute("data-theme");
+        if (theme === "light" || theme === "dark") return theme;
+        return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      button.setAttribute("aria-label", labelFor(currentTheme()));
+      button.addEventListener("click", function () {
+        var next = currentTheme() === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", next);
+        button.setAttribute("aria-label", labelFor(next));
+        try {
+          localStorage.setItem("theme", next);
+        } catch (error) {}
+      });
+    })();
   </script>
 </body>
 </html>

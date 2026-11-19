@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<div class="wrap">
+  <section class="intro">
+    <p class="kicker">분류</p>
+    <h1>{{ page.title }}</h1>
+  </section>
+  <section class="entries">
+    {% assign found = false %}
+    {% for post in site.posts %}
+      {% if post.tags contains page.tag %}
+        {% assign found = true %}
+        <article class="entry">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time>
+          <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+          {% if post.description %}
+            <p>{{ post.description }}</p>
+          {% endif %}
+        </article>
+      {% endif %}
+    {% endfor %}
+    {% if found == false %}
+      <p class="empty">아직 없다.</p>
+    {% endif %}
+  </section>
+</div>

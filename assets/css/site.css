@@ -76,9 +76,48 @@ a:hover { color: var(--accent); }
 
 .skip:focus { top: 0.6rem; }
 
-.wrap {
-  width: min(42rem, calc(100% - 2.5rem));
+.shell {
+  width: min(68rem, calc(100% - 2rem));
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 13rem minmax(0, 1fr);
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.side {
+  position: sticky;
+  top: 4.6rem;
+  padding: 1.6rem 0 3rem;
+}
+
+.side-label {
+  margin: 1.3rem 0 0.35rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.side-label:first-child { margin-top: 0; }
+
+.side nav a {
+  display: block;
+  padding: 0.12rem 0;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.side nav a[aria-current="page"] { color: var(--accent); }
+
+.wrap {
+  width: min(42rem, 100%);
+  margin: 0;
+}
+
+.empty {
+  color: var(--muted);
 }
 
 .top {
@@ -88,6 +127,11 @@ a:hover { color: var(--accent); }
   background: color-mix(in srgb, var(--bg) 88%, transparent);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(14px);
+}
+
+.top .wrap {
+  width: min(68rem, calc(100% - 2rem));
+  margin: 0 auto;
 }
 
 .bar {
@@ -106,13 +150,13 @@ a:hover { color: var(--accent); }
   text-decoration: none;
 }
 
-nav {
+.top nav {
   display: flex;
   align-items: center;
   gap: 0.95rem;
 }
 
-nav a {
+.top nav a {
   font-size: 0.92rem;
   text-decoration: none;
 }
@@ -301,6 +345,8 @@ h1 {
 }
 
 .colophon .wrap {
+  width: min(68rem, calc(100% - 2rem));
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   gap: 1rem;
@@ -316,9 +362,22 @@ h1 {
   color: #1c1917;
 }
 
+@media (max-width: 800px) {
+  .shell {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .side {
+    position: static;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--line);
+  }
+}
+
 @media (max-width: 640px) {
-  .intro { padding-top: 3rem; }
+  .intro { padding-top: 2.2rem; }
   .bar { min-height: 3.2rem; }
-  nav { gap: 0.7rem; }
+  .top nav { gap: 0.7rem; }
   .colophon .wrap { flex-direction: column; }
 }

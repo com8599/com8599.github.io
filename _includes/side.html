@@ -1,0 +1,9 @@
+<aside class="side">
+  <p class="side-label">분류</p>
+  <nav aria-label="분류">
+    {% for item in site.data.classify %}
+      {% assign item_url = item.slug | prepend: "/" | append: "/" %}
+      <a href="{{ item_url | relative_url }}"{% if page.url == item_url %} aria-current="page"{% endif %}>{{ item.name }}</a>
+    {% endfor %}
+  </nav>
+</aside>

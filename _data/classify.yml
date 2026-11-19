@@ -1,0 +1,12 @@
+- name: spring
+  slug: spring
+  tag: spring
+- name: springboot
+  slug: springboot
+  tag: spring-boot
+- name: react
+  slug: react
+  tag: react
+- name: 인프라
+  slug: infra
+  tag: infra

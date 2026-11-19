@@ -31,7 +31,12 @@
     </div>
   </header>
   <main id="content">
-    {{ content }}
+    <div class="shell">
+      {% include side.html %}
+      <div class="sheet">
+        {{ content }}
+      </div>
+    </div>
   </main>
   <footer class="colophon">
     <div class="wrap">

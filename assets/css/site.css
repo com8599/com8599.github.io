@@ -9,6 +9,16 @@
   --chip: #efeae4;
   --code: #f1ece6;
   --shadow: 0 1px 0 rgba(28, 25, 23, 0.04);
+  --syn-text: #383a42;
+  --syn-comment: #a0a1a7;
+  --syn-keyword: #a626a4;
+  --syn-string: #50a14f;
+  --syn-number: #986801;
+  --syn-function: #4078f2;
+  --syn-type: #c18401;
+  --syn-variable: #e45649;
+  --syn-operator: #0184bc;
+  --syn-punct: #696c77;
   --sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
@@ -23,6 +33,16 @@
     --accent: #e7a0ab;
     --chip: #2a2725;
     --code: #221f1d;
+    --syn-text: #abb2bf;
+    --syn-comment: #7f848e;
+    --syn-keyword: #c678dd;
+    --syn-string: #98c379;
+    --syn-number: #d19a66;
+    --syn-function: #61afef;
+    --syn-type: #e5c07b;
+    --syn-variable: #e06c75;
+    --syn-operator: #56b6c2;
+    --syn-punct: #8b929e;
   }
 }
 
@@ -36,6 +56,16 @@
   --accent: #e7a0ab;
   --chip: #2a2725;
   --code: #221f1d;
+  --syn-text: #abb2bf;
+  --syn-comment: #7f848e;
+  --syn-keyword: #c678dd;
+  --syn-string: #98c379;
+  --syn-number: #d19a66;
+  --syn-function: #61afef;
+  --syn-type: #e5c07b;
+  --syn-variable: #e06c75;
+  --syn-operator: #56b6c2;
+  --syn-punct: #8b929e;
 }
 
 :root[data-theme="light"] {
@@ -316,6 +346,111 @@ h1 {
 .prose pre code {
   padding: 0;
   background: transparent;
+}
+
+.prose .highlight { color: var(--syn-text); }
+.prose .highlight .c, .prose .highlight .c1, .prose .highlight .cm,
+.prose .highlight .cs, .prose .highlight .ch, .prose .highlight .cd {
+  color: var(--syn-comment);
+  font-style: italic;
+}
+.prose .highlight .k, .prose .highlight .kd, .prose .highlight .kn,
+.prose .highlight .kp, .prose .highlight .kr, .prose .highlight .kv,
+.prose .highlight .ow, .prose .highlight .nt, .prose .highlight .cp,
+.prose .highlight .cpf { color: var(--syn-keyword); }
+.prose .highlight .s, .prose .highlight .s1, .prose .highlight .s2,
+.prose .highlight .sb, .prose .highlight .sc, .prose .highlight .sd,
+.prose .highlight .sh, .prose .highlight .sx, .prose .highlight .ss,
+.prose .highlight .sr, .prose .highlight .dl, .prose .highlight .sa,
+.prose .highlight .se, .prose .highlight .si { color: var(--syn-string); }
+.prose .highlight .m, .prose .highlight .mi, .prose .highlight .mf,
+.prose .highlight .mh, .prose .highlight .mo, .prose .highlight .mb,
+.prose .highlight .mx, .prose .highlight .il, .prose .highlight .kc,
+.prose .highlight .no, .prose .highlight .bp { color: var(--syn-number); }
+.prose .highlight .nf, .prose .highlight .fm, .prose .highlight .nb { color: var(--syn-function); }
+.prose .highlight .nc, .prose .highlight .nn, .prose .highlight .kt,
+.prose .highlight .ne, .prose .highlight .nd { color: var(--syn-type); }
+.prose .highlight .na, .prose .highlight .nv, .prose .highlight .vi,
+.prose .highlight .vg, .prose .highlight .vc, .prose .highlight .nl,
+.prose .highlight .py, .prose .highlight .nl { color: var(--syn-variable); }
+.prose .highlight .o { color: var(--syn-operator); }
+.prose .highlight .p { color: var(--syn-punct); }
+.prose .highlight .gi { color: var(--syn-string); }
+.prose .highlight .gd { color: var(--syn-variable); }
+.prose .highlight .err { color: inherit; background: none; }
+
+.prose .hljs { color: var(--syn-text); }
+.prose .hljs-comment, .prose .hljs-quote { color: var(--syn-comment); font-style: italic; }
+.prose .hljs-keyword, .prose .hljs-selector-tag, .prose .hljs-doctag,
+.prose .hljs-section, .prose .hljs-tag { color: var(--syn-keyword); }
+.prose .hljs-string, .prose .hljs-regexp, .prose .hljs-addition,
+.prose .hljs-template-tag, .prose .hljs-char.escape_ { color: var(--syn-string); }
+.prose .hljs-number, .prose .hljs-literal, .prose .hljs-symbol,
+.prose .hljs-bullet, .prose .hljs-link { color: var(--syn-number); }
+.prose .hljs-title.function_, .prose .hljs-title, .prose .hljs-built_in { color: var(--syn-function); }
+.prose .hljs-title.class_, .prose .hljs-type, .prose .hljs-meta,
+.prose .hljs-class .hljs-title { color: var(--syn-type); }
+.prose .hljs-attr, .prose .hljs-attribute, .prose .hljs-variable,
+.prose .hljs-template-variable, .prose .hljs-property, .prose .hljs-params,
+.prose .hljs-name, .prose .hljs-deletion,
+.prose .hljs-selector-class, .prose .hljs-selector-id { color: var(--syn-variable); }
+.prose .hljs-operator { color: var(--syn-operator); }
+.prose .hljs-punctuation { color: var(--syn-punct); }
+.prose .hljs-meta .hljs-keyword, .prose .hljs-meta .hljs-string { color: inherit; }
+.prose .hljs-subst { color: var(--syn-text); }
+
+.prose .table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 1.4rem 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--bg-raise);
+  box-shadow: var(--shadow);
+  -webkit-overflow-scrolling: touch;
+}
+
+.prose table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: separate;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.prose th,
+.prose td {
+  padding: 0.6rem 0.85rem;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.prose th + th,
+.prose td + td {
+  border-left: 1px solid var(--line);
+}
+
+.prose thead th {
+  background: var(--chip);
+  font-size: 0.8rem;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.prose tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.prose tbody tr:hover td {
+  background: color-mix(in srgb, var(--chip) 55%, transparent);
+}
+
+.prose td code,
+.prose th code {
+  font-size: 0.85em;
+  white-space: nowrap;
 }
 
 .tag-group {

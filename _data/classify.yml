@@ -10,3 +10,15 @@
 - name: 인프라
   slug: infra
   tag: infra
+- name: nestjs
+  slug: nestjs
+  tag: nestjs
+- name: django
+  slug: django
+  tag: django
+- name: angular
+  slug: angular
+  tag: angular
+- name: 협업
+  slug: collab
+  tag: collab

@@ -66,5 +66,23 @@
       });
     })();
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/nginx.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/properties.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/http.min.js"></script>
+  <script>
+    (function () {
+      if (!window.hljs) return;
+      var aliases = { prisma: "typescript", text: "plaintext" };
+      document.querySelectorAll(".prose div[class*='language-'] code").forEach(function (code) {
+        var holder = code.closest("div[class*='language-']");
+        var match = holder.className.match(/language-([\w-]+)/);
+        var lang = match ? (aliases[match[1]] || match[1]) : "plaintext";
+        if (lang === "plaintext" || !hljs.getLanguage(lang)) return;
+        code.innerHTML = hljs.highlight(code.textContent, { language: lang, ignoreIllegals: true }).value;
+        code.classList.add("hljs");
+      });
+    })();
+  </script>
 </body>
 </html>

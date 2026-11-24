@@ -3,6 +3,7 @@ description: 두근두근 개발일지
 url: https://com8599.github.io
 baseurl: ""
 lang: ko
+locale: ko_KR
 
 author:
   name: tulipLee
@@ -13,9 +14,20 @@ highlighter: rouge
 permalink: /:year/:month/:day/:title/
 timezone: Asia/Seoul
 
+# GoatCounter 사이트 코드 (예: tulipping). 비워 두면 조회수를 집계하지 않는다.
+goatcounter: ""
+
+# 검색 엔진 소유 확인 코드. 각 서비스에서 받은 content 값만 넣는다.
+# 코드를 받으면 아래 주석을 풀고 값을 넣는다.
+# webmaster_verifications:
+#   google: ""
+#   bing: ""
+naver_site_verification: ""
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 defaults:
   - scope:
@@ -34,3 +46,4 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - .bundle

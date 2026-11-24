@@ -6,6 +6,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v={{ site.time | date: '%s' }}">
   {% seo %}
+  {% if site.naver_site_verification != "" %}<meta name="naver-site-verification" content="{{ site.naver_site_verification }}">{% endif %}
+  {% if page.noindex %}<meta name="robots" content="noindex">{% endif %}
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | absolute_url }}">
+  {% if site.goatcounter != "" and jekyll.environment == "production" %}
+  <script data-goatcounter="https://{{ site.goatcounter }}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  {% endif %}
   <script>
     (function () {
       try {
@@ -70,10 +76,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/nginx.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/properties.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/http.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/dart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/dockerfile.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/groovy.min.js"></script>
   <script>
     (function () {
       if (!window.hljs) return;
-      var aliases = { prisma: "typescript", text: "plaintext" };
+      var aliases = { prisma: "typescript", text: "plaintext", tsx: "typescript", jsx: "javascript" };
       document.querySelectorAll(".prose div[class*='language-'] code").forEach(function (code) {
         var holder = code.closest("div[class*='language-']");
         var match = holder.className.match(/language-([\w-]+)/);

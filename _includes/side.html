@@ -6,11 +6,15 @@
         <p class="side-group">{{ item.name }}</p>
         {% for child in item.items %}
           {% assign child_url = child.slug | prepend: "/" | append: "/" %}
-          <a class="side-child" href="{{ child_url | relative_url }}"{% if page.url == child_url %} aria-current="page"{% endif %}>{{ child.name }}</a>
+          {% assign child_tag = child.tag | default: child.slug %}
+          {% assign child_count = site.tags[child_tag].size | default: 0 %}
+          <a class="side-child" href="{{ child_url | relative_url }}"{% if page.url == child_url %} aria-current="page"{% endif %}>{{ child.name }} <span class="side-count">({{ child_count }})</span></a>
         {% endfor %}
       {% else %}
         {% assign item_url = item.slug | prepend: "/" | append: "/" %}
-        <a href="{{ item_url | relative_url }}"{% if page.url == item_url %} aria-current="page"{% endif %}>{{ item.name }}</a>
+        {% assign item_tag = item.tag | default: item.slug %}
+        {% assign item_count = site.tags[item_tag].size | default: 0 %}
+        <a href="{{ item_url | relative_url }}"{% if page.url == item_url %} aria-current="page"{% endif %}>{{ item.name }} <span class="side-count">({{ item_count }})</span></a>
       {% endif %}
     {% endfor %}
   </nav>

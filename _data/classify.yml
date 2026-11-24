@@ -4,6 +4,7 @@
       slug: spring
     - name: springboot
       slug: springboot
+      tag: spring-boot
     - name: nestjs
       slug: nestjs
     - name: django
@@ -14,6 +15,8 @@
       slug: react
     - name: angular
       slug: angular
+    - name: flutter
+      slug: flutter
 - name: 인프라
   slug: infra
 - name: 게임서버

@@ -1,0 +1,22 @@
+{% if jekyll.environment == "production" and site.firebase.project_id != "" %}
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+  import { getFirestore, doc, setDoc, increment } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-lite.js";
+
+  const postId = "{{ page.url | slugify }}";
+  const seenKey = "viewed:" + postId;
+
+  let seen = false;
+  try { seen = sessionStorage.getItem(seenKey) === "1"; } catch (error) {}
+
+  if (!seen && !navigator.webdriver) {
+    const app = initializeApp({
+      apiKey: "{{ site.firebase.api_key }}",
+      projectId: "{{ site.firebase.project_id }}"
+    });
+    setDoc(doc(getFirestore(app), "views", postId), { count: increment(1) }, { merge: true })
+      .then(() => { try { sessionStorage.setItem(seenKey, "1"); } catch (error) {} })
+      .catch(() => {});
+  }
+</script>
+{% endif %}

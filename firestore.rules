@@ -1,0 +1,18 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // 글별 조회수. 문서 ID는 글 주소를 slugify한 값이다.
+    match /views/{postId} {
+      // 조회수를 화면에 보여 줄 때 true로 바꾼다.
+      allow read: if false;
+      allow create: if request.resource.data.keys().hasOnly(['count'])
+        && request.resource.data.count == 1;
+      allow update: if request.resource.data.diff(resource.data).affectedKeys().hasOnly(['count'])
+        && request.resource.data.count == resource.data.count + 1;
+      allow delete: if false;
+    }
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

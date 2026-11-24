@@ -14,8 +14,11 @@ highlighter: rouge
 permalink: /:year/:month/:day/:title/
 timezone: Asia/Seoul
 
-# GoatCounter 사이트 코드 (예: tulipping). 비워 두면 조회수를 집계하지 않는다.
-goatcounter: ""
+# 조회수 저장용 Firebase 프로젝트. 비워 두면 집계하지 않는다.
+# 보안 규칙은 firestore.rules 파일을 Firebase 콘솔에 그대로 붙여 넣는다.
+firebase:
+  api_key: "AIzaSyDPQOzKfBMsGN6E0dI7gF0YtHkqfkPbsV0"
+  project_id: "myapplication-c0205"
 
 # 검색 엔진 소유 확인 코드. 각 서비스에서 받은 content 값만 넣는다.
 # 코드를 받으면 아래 주석을 풀고 값을 넣는다.
@@ -47,3 +50,4 @@ exclude:
   - Gemfile.lock
   - README.md
   - .bundle
+  - firestore.rules

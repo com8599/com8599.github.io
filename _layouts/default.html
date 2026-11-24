@@ -9,9 +9,6 @@
   {% if site.naver_site_verification != "" %}<meta name="naver-site-verification" content="{{ site.naver_site_verification }}">{% endif %}
   {% if page.noindex %}<meta name="robots" content="noindex">{% endif %}
   <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | absolute_url }}">
-  {% if site.goatcounter != "" and jekyll.environment == "production" %}
-  <script data-goatcounter="https://{{ site.goatcounter }}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-  {% endif %}
   <script>
     (function () {
       try {

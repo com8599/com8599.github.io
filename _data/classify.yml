@@ -1,24 +1,22 @@
-- name: spring
-  slug: spring
-  tag: spring
-- name: springboot
-  slug: springboot
-  tag: spring-boot
-- name: react
-  slug: react
-  tag: react
+- name: 백엔드
+  items:
+    - name: spring
+      slug: spring
+    - name: springboot
+      slug: springboot
+    - name: nestjs
+      slug: nestjs
+    - name: django
+      slug: django
+- name: 프론트엔드
+  items:
+    - name: react
+      slug: react
+    - name: angular
+      slug: angular
 - name: 인프라
   slug: infra
-  tag: infra
-- name: nestjs
-  slug: nestjs
-  tag: nestjs
-- name: django
-  slug: django
-  tag: django
-- name: angular
-  slug: angular
-  tag: angular
+- name: 게임서버
+  slug: game-server
 - name: 협업
   slug: collab
-  tag: collab

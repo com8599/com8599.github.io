@@ -141,6 +141,14 @@ a:hover { color: var(--accent); }
 
 .side nav a[aria-current="page"] { color: var(--accent); }
 
+.side-group {
+  margin: 0;
+  padding: 0.12rem 0;
+  font-size: 0.95rem;
+}
+
+.side nav a.side-child { padding-left: 1.2rem; }
+
 .wrap {
   width: min(42rem, 100%);
   margin: 0;
